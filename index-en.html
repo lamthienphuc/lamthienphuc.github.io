@@ -118,12 +118,25 @@
 
     .education-info { background: #f8f9fa; padding: 20px; border-radius: 10px; }
 
-    @media print {
-      body { -webkit-print-color-adjust: exact; }
-      .container { box-shadow: none; margin: 0; width: 100%; page-break-inside: avoid; }
-      .main-content { display: block; }
-      @page { size: A4; margin: 10mm; }
-    }
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    zoom: 65%; /* thu nhỏ toàn bộ để vừa 1 trang */
+  }
+  .container {
+    box-shadow: none;
+    margin: 0;
+    width: 100%;
+    page-break-inside: avoid;
+  }
+  .main-content {
+    display: block;
+  }
+  @page {
+    size: A4;
+    margin: 5mm;
+  }
+}
   </style>
 </head>
 <body>
