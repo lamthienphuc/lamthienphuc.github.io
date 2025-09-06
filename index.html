@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Lâm Thiên Phúc</title>
+  <title>CV - Lam Thien Phuc</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Arial', sans-serif;
@@ -26,7 +22,7 @@
     }
 
     header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: #1E90FF; /* xanh biển */
       color: white;
       padding: 40px;
       text-align: center;
@@ -59,271 +55,296 @@
       flex-wrap: wrap;
     }
 
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 5px;
+    .contact-item { display: flex; align-items: center; gap: 5px; }
+
+    .lang-btn {
+      margin-top: 15px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      background: white;
+      color: #1E90FF;
+      font-weight: bold;
+      cursor: pointer;
     }
 
-    .main-content {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 0;
-    }
-
-    .sidebar {
-      background: #f8f9fa;
-      padding: 30px;
-    }
-
-    .content {
-      padding: 30px;
-    }
+    .main-content { display: grid; grid-template-columns: 1fr 2fr; gap: 0; }
+    .sidebar { background: #f8f9fa; padding: 30px; }
+    .content { padding: 30px; }
 
     h2 {
-      color: #667eea;
-      border-bottom: 3px solid #667eea;
+      color: #1E90FF;
+      border-bottom: 3px solid #1E90FF;
       padding-bottom: 10px;
       margin-bottom: 20px;
       font-size: 1.4em;
       text-transform: uppercase;
     }
 
-    .skill-category {
-      margin-bottom: 20px;
-    }
+    .skill-category { margin-bottom: 20px; }
+    .skill-category h3 { color: #555; font-size: 1em; margin-bottom: 10px; }
 
-    .skill-category h3 {
-      color: #555;
-      font-size: 1em;
-      margin-bottom: 10px;
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
     .skill-tag {
-      background: #667eea;
-      color: white;
-      padding: 5px 12px;
-      border-radius: 20px;
+      background: #1E90FF; color: white;
+      padding: 5px 12px; border-radius: 20px;
       font-size: 0.85em;
     }
 
     .objective {
-      background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      border-left: 4px solid #667eea;
+      background: #e6f2ff;
+      padding: 20px; border-radius: 10px;
+      margin-bottom: 30px; border-left: 4px solid #1E90FF;
     }
 
     .project {
-      margin-bottom: 30px;
-      padding: 20px;
-      background: #f8f9fa;
-      border-radius: 10px;
+      margin-bottom: 30px; padding: 20px;
+      background: #f8f9fa; border-radius: 10px;
       transition: transform 0.3s ease;
     }
-
     .project:hover {
       transform: translateX(5px);
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
-    .project-title {
-      color: #667eea;
-      font-weight: bold;
-      font-size: 1.1em;
-      margin-bottom: 10px;
-    }
+    .project-title { color: #1E90FF; font-weight: bold; font-size: 1.1em; margin-bottom: 10px; }
+    .project-tech { color: #666; font-size: 0.9em; font-style: italic; margin-bottom: 10px; }
+    .project ul { list-style: none; padding-left: 0; }
+    .project li { position: relative; padding-left: 25px; margin-bottom: 8px; }
+    .project li:before { content: "▸"; position: absolute; left: 0; color: #1E90FF; font-weight: bold; }
 
-    .project-tech {
-      color: #666;
-      font-size: 0.9em;
-      font-style: italic;
-      margin-bottom: 10px;
-    }
+    .highlight { font-weight: bold; color: #1E90FF; }
 
-    .project ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .project li {
-      position: relative;
-      padding-left: 25px;
-      margin-bottom: 8px;
-    }
-
-    .project li:before {
-      content: "▸";
-      position: absolute;
-      left: 0;
-      color: #667eea;
-      font-weight: bold;
-    }
-
-    .highlight {
-      font-weight: bold;
-      color: #667eea;
-    }
-
-    .certificates {
-      list-style: none;
-      padding: 0;
-    }
-
+    .certificates { list-style: none; padding: 0; }
     .certificates li {
-      background: white;
-      padding: 10px 15px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      border-left: 3px solid #667eea;
+      background: white; padding: 10px 15px;
+      margin-bottom: 10px; border-radius: 5px;
+      border-left: 3px solid #1E90FF;
     }
 
-    .education-info {
-      background: #f8f9fa;
-      padding: 20px;
-      border-radius: 10px;
-    }
+    .education-info { background: #f8f9fa; padding: 20px; border-radius: 10px; }
 
-    @media print {
-      .container {
-        box-shadow: none;
-        margin: 0;
-      }
-    }
-
+    @media print { .container { box-shadow: none; margin: 0; } }
     @media (max-width: 768px) {
-      .main-content {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 2em;
-      }
+      .main-content { grid-template-columns: 1fr; }
+      h1 { font-size: 2em; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <img src="3x4.jpg" 
-           alt="Profile" class="profile-img">
-      <h1>Lâm Thiên Phúc</h1>
+      <img src="images/3x4.jpg" alt="Profile" class="profile-img">
+      <h1>Lam Thien Phuc</h1>
       <div class="contact-info">
-        <span class="contact-item">📍 TP. Hồ Chí Minh</span>
+        <span class="contact-item">📍 Ho Chi Minh City</span>
         <span class="contact-item">📱 0938 734 005</span>
         <span class="contact-item">✉️ thienphuclam169@gmail.com</span>
         <span class="contact-item">💼 <a href="https://www.linkedin.com/in/lam-thien-phuc-74b6bb23b/" style="color: white;">LinkedIn</a></span>
       </div>
+      <button id="lang-toggle" class="lang-btn">🇬🇧 English / 🇻🇳 Tiếng Việt</button>
     </header>
 
-    <div class="main-content">
-      <div class="sidebar">
-        <section>
-          <h2>Kỹ Năng Chuyên Môn</h2>
-          <div class="skill-category">
-            <h3>Ngôn ngữ lập trình</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">R</span>
+    <!-- CV English -->
+    <div id="cv-en" style="display:block;">
+      <div class="main-content">
+        <div class="sidebar">
+          <section>
+            <h2>Skills</h2>
+            <div class="skill-category">
+              <h3>Programming Languages</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">R</span>
+              </div>
             </div>
-          </div>
-
-          <div class="skill-category">
-            <h3>Cơ sở dữ liệu</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">PostgreSQL</span>
-              <span class="skill-tag">MySQL</span>
-              <span class="skill-tag">SQL Server</span>
+            <div class="skill-category">
+              <h3>Databases</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">SQL Server</span>
+              </div>
             </div>
-          </div>
-
-          <div class="skill-category">
-            <h3>Phân tích & Xử lý dữ liệu</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Excel</span>
-              <span class="skill-tag">Power BI</span>
-              <span class="skill-tag">Tableau</span>
+            <div class="skill-category">
+              <h3>Data Analytics</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Excel</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Tableau</span>
+              </div>
             </div>
-          </div>
-
-          <div class="skill-category">
-            <h3>Big Data</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Spark</span>
-              <span class="skill-tag">BigQuery</span>
-              <span class="skill-tag">Kafka</span>
+            <div class="skill-category">
+              <h3>Big Data</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Spark</span>
+                <span class="skill-tag">BigQuery</span>
+                <span class="skill-tag">Kafka</span>
+              </div>
             </div>
-          </div>
-
-          <div class="skill-category">
-            <h3>ETL & Cloud</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">SSIS</span>
-              <span class="skill-tag">Google Cloud</span>
-              <span class="skill-tag">Docker</span>
+            <div class="skill-category">
+              <h3>ETL & Cloud</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">SSIS</span>
+                <span class="skill-tag">Google Cloud</span>
+                <span class="skill-tag">Docker</span>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+          <section style="margin-top: 30px;">
+            <h2>Certificates</h2>
+            <ul class="certificates">
+              <li><strong><a href="https://github.com/lamthienphuc/lamthienphuc.github.io/raw/main/TOEIC760.pdf" target="_blank">TOEIC:</a></strong> 760</li>
+              <li><strong>Google Data Analytics</strong><br>Coursera Certificate</li>
+              <li><strong>Google Advanced Data Analytics</strong><br>Coursera Certificate</li>
+            </ul>
+          </section>
+        </div>
 
-        <section style="margin-top: 30px;">
-          <h2>Chứng Chỉ</h2>
-          <ul class="certificates">
-            <li><strong>TOEIC:</strong> 760</li>
-            <li><strong>Google Data Analytics</strong><br>Coursera Certificate</li>
-            <li><strong>Google Advanced Data Analytics</strong><br>Coursera Certificate</li>
-          </ul>
-        </section>
+        <div class="content">
+          <section class="objective">
+            <h2 style="border: none; margin-bottom: 10px;">Career Objective</h2>
+            <p>Final-year Data Science student passionate about data analysis, seeking internship or fresher role to grow skills and contribute to business success with data-driven solutions.</p>
+          </section>
+          <section>
+            <h2>Highlighted Projects</h2>
+            <div class="project">
+              <div class="project-title">Data Warehouse & OLAP for Business Reporting</div>
+              <div class="project-tech">Tech: Excel, SQL Server, SSAS, SSIS, Power BI</div>
+              <ul>
+                <li>Designed and implemented a full data warehouse solution for ABC-3 Distribution, <span class="highlight">managing $80.45M sales data</span> across regions.</li>
+                <li>Built complex OLAP cubes enabling <span class="highlight">drill-down/roll-up</span> by time, geography, and products.</li>
+                <li>Created Power BI dashboards revealing insights: <span class="highlight">82% of revenue from Bikes ($66.3M)</span>, <span class="highlight">66% from US market</span>, and <span class="highlight">89% growth YoY (2010–2013)</span>.</li>
+                <li>📂 <a href="https://github.com/lamthienphuc/ABC-3-Distribution-Data-Warehouse-and-OLAP-solution" target="_blank">View on Github</a></li>
+              </ul>
+            </div>
+            <div class="project">
+              <div class="project-title">Credit Risk Prediction</div>
+              <div class="project-tech">Tech: Python, Scikit-learn, Pandas, NumPy</div>
+              <ul>
+                <li>Implemented <span class="highlight">5 ML algorithms</span> (Random Forest, KNN, Gradient Boosting, Logistic Regression, Naive Bayes).</li>
+                <li>Applied <span class="highlight">hyperparameter tuning</span> and <span class="highlight">class weight balancing</span> for imbalanced data.</li>
+                <li>Achieved excellent performance: <span class="highlight">99.78% ROC-AUC</span>, <span class="highlight">97.96% accuracy</span> with Random Forest.</li>
+                <li>📂 <a href="https://github.com/lamthienphuc/Loan-Risk-Analysis-and-Prediction-Using-Machine-Learning-Models" target="_blank">View on Github</a></li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>Education</h2>
+            <div class="education-info">
+              <strong style="color: #1E90FF; font-size: 1.1em;">University of Economics & Finance (UEF)</strong><br>
+              <strong>Major:</strong> Data Science<br>
+              <strong>Duration:</strong> 09/2021 - Present (Final-year)<br>
+              <strong>Email:</strong> phuclt21@uef.edu.vn
+            </div>
+          </section>
+        </div>
       </div>
+    </div>
 
-      <div class="content">
-        <section class="objective">
-          <h2 style="border: none; margin-bottom: 10px;">Mục Tiêu Nghề Nghiệp</h2>
-          <p>Sinh viên năm cuối ngành Khoa học Dữ liệu với đam mê phân tích và xử lý dữ liệu, mong muốn tìm kiếm vị trí thực tập hoặc fresher để phát triển kỹ năng và đóng góp giá trị cho doanh nghiệp.</p>
-        </section>
-
-        <section>
-          <h2>Dự Án Nổi Bật</h2>
-          <div class="project">
-            <div class="project-title">Kho Dữ Liệu và Giải Pháp OLAP cho Báo Cáo Doanh Nghiệp</div>
-            <div class="project-tech">Công nghệ: Excel, SQL Server, SSAS, Microsoft SSIS, Power BI</div>
-            <ul>
-              <li>Thiết kế và triển khai giải pháp kho dữ liệu toàn diện cho công ty ABC-3 Distribution, <span class="highlight">quản lý dữ liệu bán hàng trị giá 80.45 triệu USD</span>.</li>
-              <li>Xây dựng OLAP cubes đa chiều với cấu trúc phân cấp phức tạp, cho phép <span class="highlight">drill-down/roll-up</span> theo thời gian, địa lý và danh mục sản phẩm.</li>
-              <li>Tạo dashboard Power BI phát hiện insights quan trọng: <span class="highlight">82% doanh số tập trung vào danh mục Xe đạp (66.3 triệu USD)</span>, <span class="highlight">20% khách hàng đóng góp 75% doanh số</span>.</li>
-              <li>📂 <a href="https://github.com/lamthienphuc/ABC-3-Distribution-Data-Warehouse-and-OLAP-solution" target="_blank">Xem chi tiết trên Github</a></li>
+    <!-- CV Vietnamese -->
+    <div id="cv-vi" style="display:none;">
+      <div class="main-content">
+        <div class="sidebar">
+          <section>
+            <h2>Kỹ năng</h2>
+            <div class="skill-category">
+              <h3>Ngôn ngữ lập trình</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">R</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Cơ sở dữ liệu</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">SQL Server</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Phân tích dữ liệu</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Excel</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Tableau</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Big Data</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Spark</span>
+                <span class="skill-tag">BigQuery</span>
+                <span class="skill-tag">Kafka</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>ETL & Cloud</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">SSIS</span>
+                <span class="skill-tag">Google Cloud</span>
+                <span class="skill-tag">Docker</span>
+              </div>
+            </div>
+          </section>
+          <section style="margin-top: 30px;">
+            <h2>Chứng chỉ</h2>
+            <ul class="certificates">
+              <li><strong><a href="toeic.jpg" target="_blank">TOEIC:</a></strong> 760</li>
+              <li><strong>Google Data Analytics</strong><br>Coursera Certificate</li>
+              <li><strong>Google Advanced Data Analytics</strong><br>Coursera Certificate</li>
             </ul>
-          </div>
+          </section>
+        </div>
 
-          <div class="project">
-            <div class="project-title">Phân Tích Dự Đoán cho Đánh Giá Rủi Ro Tín Dụng</div>
-            <div class="project-tech">Công nghệ: Python, Scikit-learn, Pandas, NumPy</div>
-            <ul>
-              <li>Triển khai và tối ưu hóa <span class="highlight">5 thuật toán machine learning</span> (Random Forest, KNN, Gradient Boosting, Logistic Regression, Naive Bayes).</li>
-              <li>Áp dụng <span class="highlight">hyperparameter tuning</span> và <span class="highlight">điều chỉnh class weight</span> để xử lý dữ liệu mất cân bằng.</li>
-              <li>Đạt hiệu suất xuất sắc với mô hình Random Forest: <span class="highlight">99.78% ROC-AUC</span> và <span class="highlight">97.96% độ chính xác</span> sau tối ưu.</li>
-              <li>📂 <a href="https://github.com/lamthienphuc/Loan-Risk-Analysis-and-Prediction-Using-Machine-Learning-Models" target="_blank">Xem chi tiết trên Github</a></li>
-            </ul>
-          </div>
-        </section>
-
-        <section>
-          <h2>Học Vấn</h2>
-          <div class="education-info">
-            <strong style="color: #667eea; font-size: 1.1em;">Đại học Kinh tế - Tài chính TP.HCM (UEF)</strong><br>
-            <strong>Chuyên ngành:</strong> Khoa học Dữ liệu<br>
-            <strong>Thời gian:</strong> 09/2021 - Hiện tại (Sinh viên năm cuối)<br>
-            <strong>Email:</strong> phuclt21@uef.edu.vn
-          </div>
-        </section>
+        <div class="content">
+          <section class="objective">
+            <h2 style="border: none; margin-bottom: 10px;">Mục tiêu nghề nghiệp</h2>
+            <p>Sinh viên năm cuối ngành Khoa học Dữ liệu với đam mê phân tích dữ liệu, mong muốn tìm kiếm vị trí thực tập hoặc fresher để phát triển kỹ năng và đóng góp giá trị cho doanh nghiệp.</p>
+          </section>
+          <section>
+            <h2>Dự án nổi bật</h2>
+            <div class="project">
+              <div class="project-title">Kho dữ liệu & OLAP cho báo cáo doanh nghiệp</div>
+              <div class="project-tech">Công nghệ: Excel, SQL Server, SSAS, SSIS, Power BI</div>
+              <ul>
+                <li>Thiết kế và triển khai giải pháp kho dữ liệu toàn diện cho ABC-3 Distribution, <span class="highlight">quản lý 80.45 triệu USD dữ liệu bán hàng</span>.</li>
+                <li>Xây dựng cubes OLAP phức tạp, cho phép <span class="highlight">drill-down/roll-up</span> theo thời gian, khu vực, sản phẩm.</li>
+                <li>Tạo dashboard Power BI tìm ra insights: <span class="highlight">82% doanh thu từ Xe đạp (66.3 triệu USD)</span>, <span class="highlight">66% từ thị trường Mỹ</span>, <span class="highlight">tăng trưởng 89% YoY (2010–2013)</span>.</li>
+                <li>📂 <a href="https://github.com/lamthienphuc/ABC-3-Distribution-Data-Warehouse-and-OLAP-solution" target="_blank">Xem trên Github</a></li>
+              </ul>
+            </div>
+            <div class="project">
+              <div class="project-title">Phân tích rủi ro tín dụng</div>
+              <div class="project-tech">Công nghệ: Python, Scikit-learn, Pandas, NumPy</div>
+              <ul>
+                <li>Triển khai <span class="highlight">5 thuật toán ML</span> (Random Forest, KNN, Gradient Boosting, Logistic Regression, Naive Bayes).</li>
+                <li>Áp dụng <span class="highlight">tinh chỉnh tham số</span> và <span class="highlight">class weight balancing</span> để xử lý dữ liệu mất cân bằng.</li>
+                <li>Đạt hiệu suất cao: <span class="highlight">99.78% ROC-AUC</span>, <span class="highlight">97.96% accuracy</span> với Random Forest.</li>
+                <li>📂 <a href="https://github.com/lamthienphuc/Loan-Risk-Analysis-and-Prediction-Using-Machine-Learning-Models" target="_blank">Xem trên Github</a></li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>Học vấn</h2>
+            <div class="education-info">
+              <strong style="color: #1E90FF; font-size: 1.1em;">Đại học Kinh tế - Tài chính TP.HCM (UEF)</strong><br>
+              <strong>Chuyên ngành:</strong> Khoa học Dữ liệu<br>
+              <strong>Thời gian:</strong> 09/2021 - Hiện tại (Sinh viên năm cuối)<br>
+              <strong>Email:</strong> phuclt21@uef.edu.vn
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   </div>
-</body>
-</html>
+
+  <script>
+    const toggleBtn = document.getElementById("lang-toggle");
+    const cvEn = document.getElementById("cv-en");
+    const cvVi = document.getElementById("cv-vi");
+
+    toggleBtn.addEventListener("click", () => {
+      if (cvEn.style.display === "none") {
+        cvEn.style.display
