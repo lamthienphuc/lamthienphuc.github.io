@@ -1,2 +1,2 @@
 # lamthienphuc.github.io
-Vietnamese Porfolio
+Vietnamese/English Porfolio
