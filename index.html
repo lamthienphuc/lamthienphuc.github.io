@@ -13,13 +13,13 @@
       background-color: #f4f4f4;
     }
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 20px auto;
       background: white;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
     header {
-      background: black; /* nền header đen */
+      background: black;
       color: white;
       padding: 40px;
       text-align: center;
@@ -95,12 +95,24 @@
     .project li { position: relative; padding-left: 25px; margin-bottom: 8px; }
     .project li:before { content: "▸"; position: absolute; left: 0; color: black; font-weight: bold; }
     .highlight { font-weight: bold; color: black; }
+    /* Certificates */
     .certificates { list-style: none; padding: 0; }
     .certificates li {
-      background: white; padding: 10px 15px;
-      margin-bottom: 10px; border-radius: 5px;
-      border-left: 3px solid black;
+      background: white;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border-left: 4px solid black;
+      width: 100%;
+      text-align: left;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
+    .certificates li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+    .certificates li a:hover { color: #007bff; }
     .education-info { background: #f8f9fa; padding: 20px; border-radius: 10px; }
     @media print { .container { box-shadow: none; margin: 0; } }
     @media (max-width: 768px) {
@@ -112,7 +124,6 @@
 <body>
   <div class="container">
     <header>
-      <!-- Profile image -->
       <img src="https://raw.githubusercontent.com/lamthienphuc/lamthienphuc.github.io/main/3x4.jpg" alt="Profile" class="profile-img">
       <h1>Lam Thien Phuc</h1>
       <div class="contact-info">
@@ -129,11 +140,53 @@
       <div class="main-content">
         <div class="sidebar">
           <section>
+            <h2>Skills</h2>
+            <div class="skill-category">
+              <h3>Programming Languages</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">R</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Databases</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">SQL Server</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Data Analytics</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Excel</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Tableau</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Big Data</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Spark</span>
+                <span class="skill-tag">BigQuery</span>
+                <span class="skill-tag">Kafka</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>ETL & Cloud</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">SSIS</span>
+                <span class="skill-tag">Google Cloud</span>
+                <span class="skill-tag">Docker</span>
+              </div>
+            </div>
+          </section>
+          <section style="margin-top: 30px;">
             <h2>Certificates</h2>
             <ul class="certificates">
-              <li><strong><a href="https://raw.githubusercontent.com/lamthienphuc/lamthienphuc.github.io/main/toeic.jpg" target="_blank">TOEIC:</a></strong> 760</li>
-              <li><strong><a href="https://raw.githubusercontent.com/lamthienphuc/lamthienphuc.github.io/main/Coursera%20Google%20Data%20Analytics%20Certificate.pdf" target="_blank">Google Data Analytics</a></strong><br>Coursera Certificate</li>
-              <li><strong><a href="https://raw.githubusercontent.com/lamthienphuc/lamthienphuc.github.io/main/Coursera%20Google%20Advanced%20Data%20Analytics%20Certificate.pdf" target="_blank">Google Advanced Data Analytics</a></strong><br>Coursera Certificate</li>
+              <li><a href="https://raw.githubusercontent.com/lamthienphuc/lamthienphuc.github.io/main/toeic.jpg" target="_blank">📷 TOEIC</a>: 760</li>
+              <li><a href="https://github.com/lamthienphuc/lamthienphuc.github.io/blob/main/Coursera%20Google%20Data%20Analytics%20Certificate.pdf" target="_blank">📄 Google Data Analytics</a><br>Coursera Certificate</li>
+              <li><a href="https://github.com/lamthienphuc/lamthienphuc.github.io/blob/main/Coursera%20Google%20Advanced%20Data%20Analytics%20Certificate.pdf" target="_blank">📄 Google Advanced Data Analytics</a><br>Coursera Certificate</li>
             </ul>
           </section>
         </div>
@@ -141,6 +194,36 @@
           <section class="objective">
             <h2 style="border: none; margin-bottom: 10px;">Career Objective</h2>
             <p>Final-year Data Science student passionate about data analysis, seeking internship or fresher role to grow skills and contribute to business success with data-driven solutions.</p>
+          </section>
+          <section>
+            <h2>Highlighted Projects</h2>
+            <div class="project">
+              <div class="project-title">Data Warehouse & OLAP for Business Reporting</div>
+              <div class="project-tech">Tech: Excel, SQL Server, SSAS, SSIS, Power BI</div>
+              <ul>
+                <li>Designed and implemented a full data warehouse solution for ABC-3 Distribution, <span class="highlight">managing $80.45M sales data</span>.</li>
+                <li>Built OLAP cubes with complex hierarchies enabling <span class="highlight">drill-down/roll-up</span>.</li>
+                <li>Created dashboards showing insights: <span class="highlight">82% revenue from Bikes ($66.3M)</span>, <span class="highlight">66% from US market</span>.</li>
+              </ul>
+            </div>
+            <div class="project">
+              <div class="project-title">Credit Risk Prediction</div>
+              <div class="project-tech">Tech: Python, Scikit-learn, Pandas, NumPy</div>
+              <ul>
+                <li>Implemented <span class="highlight">5 ML algorithms</span>.</li>
+                <li>Applied <span class="highlight">hyperparameter tuning</span> & <span class="highlight">class balancing</span>.</li>
+                <li>Achieved <span class="highlight">99.78% ROC-AUC</span>, <span class="highlight">97.96% accuracy</span>.</li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>Education</h2>
+            <div class="education-info">
+              <strong style="color: black; font-size: 1.1em;">University of Economics & Finance (UEF)</strong><br>
+              <strong>Major:</strong> Data Science<br>
+              <strong>Duration:</strong> 09/2021 - Present<br>
+              <strong>Email:</strong> phuclt21@uef.edu.vn
+            </div>
           </section>
         </div>
       </div>
@@ -151,11 +234,34 @@
       <div class="main-content">
         <div class="sidebar">
           <section>
+            <h2>Kỹ năng</h2>
+            <div class="skill-category">
+              <h3>Ngôn ngữ lập trình</h3>
+              <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">R</span></div>
+            </div>
+            <div class="skill-category">
+              <h3>Cơ sở dữ liệu</h3>
+              <div class="skill-tags"><span class="skill-tag">PostgreSQL</span><span class="skill-tag">MySQL</span><span class="skill-tag">SQL Server</span></div>
+            </div>
+            <div class="skill-category">
+              <h3>Phân tích dữ liệu</h3>
+              <div class="skill-tags"><span class="skill-tag">Excel</span><span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span></div>
+            </div>
+            <div class="skill-category">
+              <h3>Big Data</h3>
+              <div class="skill-tags"><span class="skill-tag">Spark</span><span class="skill-tag">BigQuery</span><span class="skill-tag">Kafka</span></div>
+            </div>
+            <div class="skill-category">
+              <h3>ETL & Cloud</h3>
+              <div class="skill-tags"><span class="skill-tag">SSIS</span><span class="skill-tag">Google Cloud</span><span class="skill-tag">Docker</span></div>
+            </div>
+          </section>
+          <section style="margin-top: 30px;">
             <h2>Chứng chỉ</h2>
             <ul class="certificates">
-              <li><strong><a href="https://raw.githubusercontent.com/lamthienphuc/lamthienphuc.github.io/main/toeic.jpg" target="_blank">TOEIC:</a></strong> 760</li>
-              <li><strong><a href="https://raw.githubusercontent.com/lamthienphuc/lamthienphuc.github.io/main/Coursera%20Google%20Data%20Analytics%20Certificate.pdf" target="_blank">Google Data Analytics</a></strong><br>Chứng chỉ Coursera</li>
-              <li><strong><a href="https://raw.githubusercontent.com/lamthienphuc/lamthienphuc.github.io/main/Coursera%20Google%20Advanced%20Data%20Analytics%20Certificate.pdf" target="_blank">Google Advanced Data Analytics</a></strong><br>Chứng chỉ Coursera</li>
+              <li><a href="https://raw.githubusercontent.com/lamthienphuc/lamthienphuc.github.io/main/toeic.jpg" target="_blank">📷 TOEIC</a>: 760</li>
+              <li><a href="https://github.com/lamthienphuc/lamthienphuc.github.io/blob/main/Coursera%20Google%20Data%20Analytics%20Certificate.pdf" target="_blank">📄 Google Data Analytics</a><br>Chứng chỉ Coursera</li>
+              <li><a href="https://github.com/lamthienphuc/lamthienphuc.github.io/blob/main/Coursera%20Google%20Advanced%20Data%20Analytics%20Certificate.pdf" target="_blank">📄 Google Advanced Data Analytics</a><br>Chứng chỉ Coursera</li>
             </ul>
           </section>
         </div>
@@ -163,6 +269,36 @@
           <section class="objective">
             <h2 style="border: none; margin-bottom: 10px;">Mục tiêu nghề nghiệp</h2>
             <p>Sinh viên năm cuối ngành Khoa học Dữ liệu với đam mê phân tích dữ liệu, mong muốn tìm kiếm vị trí thực tập hoặc fresher để phát triển kỹ năng và đóng góp giá trị cho doanh nghiệp.</p>
+          </section>
+          <section>
+            <h2>Dự án nổi bật</h2>
+            <div class="project">
+              <div class="project-title">Kho dữ liệu & OLAP</div>
+              <div class="project-tech">Công nghệ: Excel, SQL Server, SSAS, SSIS, Power BI</div>
+              <ul>
+                <li>Quản lý <span class="highlight">80.45 triệu USD dữ liệu bán hàng</span>.</li>
+                <li>Xây dựng OLAP cubes cho phép <span class="highlight">drill-down/roll-up</span>.</li>
+                <li>Dashboard Power BI: <span class="highlight">82% doanh thu từ Xe đạp</span>, <span class="highlight">66% từ thị trường Mỹ</span>.</li>
+              </ul>
+            </div>
+            <div class="project">
+              <div class="project-title">Phân tích rủi ro tín dụng</div>
+              <div class="project-tech">Công nghệ: Python, Scikit-learn, Pandas, NumPy</div>
+              <ul>
+                <li>Triển khai <span class="highlight">5 thuật toán ML</span>.</li>
+                <li>Tối ưu tham số & xử lý dữ liệu mất cân bằng.</li>
+                <li>Hiệu suất: <span class="highlight">99.78% ROC-AUC</span>, <span class="highlight">97.96% accuracy</span>.</li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>Học vấn</h2>
+            <div class="education-info">
+              <strong style="color: black; font-size: 1.1em;">Đại học Kinh tế - Tài chính TP.HCM (UEF)</strong><br>
+              <strong>Chuyên ngành:</strong> Khoa học Dữ liệu<br>
+              <strong>Thời gian:</strong> 09/2021 - Hiện tại<br>
+              <strong>Email:</strong> phuclt21@uef.edu.vn
+            </div>
           </section>
         </div>
       </div>
