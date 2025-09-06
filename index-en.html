@@ -121,17 +121,20 @@
 @media print {
   body {
     -webkit-print-color-adjust: exact;
-    zoom: 40%; /* thu nhỏ toàn bộ để vừa 1 trang */
   }
   .container {
-    box-shadow: none;
-    margin: 0;
-    width: 100%;
-    page-break-inside: avoid;
+    transform: scale(0.4);   /* co 70% */
+    transform-origin: top left;
+    width: 142%;             /* bù lại phần scale */
   }
   .main-content {
     display: block;
   }
+  @page {
+    size: A4;
+    margin: 5mm;
+  }
+}
   @page {
     size: A4;
     margin: 5mm;
