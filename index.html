@@ -22,7 +22,7 @@
     }
 
     header {
-      background: #1E90FF; /* xanh biển */
+      background: #87CEFA; /* xanh nhạt */
       color: white;
       padding: 40px;
       text-align: center;
@@ -142,7 +142,7 @@
         <span class="contact-item">✉️ thienphuclam169@gmail.com</span>
         <span class="contact-item">💼 <a href="https://www.linkedin.com/in/lam-thien-phuc-74b6bb23b/" style="color: white;">LinkedIn</a></span>
       </div>
-      <button id="lang-toggle" class="lang-btn">🇬🇧 English / 🇻🇳 Tiếng Việt</button>
+      <button id="lang-toggle" class="lang-btn">Switch to Vietnamese</button>
     </header>
 
     <!-- CV English -->
@@ -224,7 +224,7 @@
               <ul>
                 <li>Implemented <span class="highlight">5 ML algorithms</span> (Random Forest, KNN, Gradient Boosting, Logistic Regression, Naive Bayes).</li>
                 <li>Applied <span class="highlight">hyperparameter tuning</span> and <span class="highlight">class weight balancing</span> for imbalanced data.</li>
-                <li>Achieved high performance: <span class="highlight">99.78% ROC-AUC</span>, <span class="highlight">97.96% accuracy</span> with Random Forest.</li>
+                <li>Achieved excellent performance: <span class="highlight">99.78% ROC-AUC</span>, <span class="highlight">97.96% accuracy</span> with Random Forest.</li>
                 <li>📂 <a href="https://github.com/lamthienphuc/Loan-Risk-Analysis-and-Prediction-Using-Machine-Learning-Models" target="_blank">View on Github</a></li>
               </ul>
             </div>
@@ -291,7 +291,7 @@
           <section style="margin-top: 30px;">
             <h2>Chứng chỉ</h2>
             <ul class="certificates">
-              <li><strong><a href="toeic.jpg" target="_blank">TOEIC:</a></strong> 760</li>
+              <li><strong><a href="https://github.com/lamthienphuc/lamthienphuc.github.io/blob/38236881ee587f3b2a46e985f154de8dbaae55ce/toeic.jpg" target="_blank">TOEIC:</a></strong> 760</li>
               <li><strong>Google Data Analytics</strong><br>Coursera Certificate</li>
               <li><strong>Google Advanced Data Analytics</strong><br>Coursera Certificate</li>
             </ul>
@@ -347,4 +347,10 @@
 
     toggleBtn.addEventListener("click", () => {
       if (cvEn.style.display === "none") {
-        cvEn.style.display
+        cvEn.style.display = "block";
+        cvVi.style.display = "none";
+        toggleBtn.textContent = "Switch to Vietnamese";
+      } else {
+        cvEn.style.display = "none";
+        cvVi.style.display = "block";
+        toggle
